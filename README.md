@@ -1,6 +1,16 @@
 # RJVFL
 对 iOS Layout的封装, 思路来源于VFL
 
+install:
+
+iOS 8+
+
+```
+pod 'RJVFL'
+```
+如果不使用CocoaPods
+将UIView+RJVFL.h和UIView+RJVFL.m加入工程即可
+
 ## 1.四周对齐约束
 ```
 /**RJ 2018-12-29 19:29:01 _redView到self.backgroundView的四周边距都为10,该方法等价于下面四行代码*/
