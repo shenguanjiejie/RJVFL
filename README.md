@@ -8,7 +8,7 @@
 /**RJ 2018-12-29 19:30:32 _blueView到_redView的四周边距分别为0,10,100,20*/
 [_redView addAllAlignConstraintToView:_blueView edgeInset:UIEdgeInsetsMake(0, 10, 100, 20)];
 ```
-![1](https://github.com/shenguanjiejie/RJVFL/1.png) 
+![1](https://github.com/shenguanjiejie/RJVFL/blob/master/Images/1.png) 
 
 ## 2.宽高约束及外部四周约束
 ```
@@ -25,7 +25,7 @@
 [_redView addBottomConstraintToView:_blueView constant:10];
 [_redView addRightConstraintToView:_blueView constant:20];
 ```
-![2](https://github.com/shenguanjiejie/RJVFL/2.png) 
+![2](https://github.com/shenguanjiejie/RJVFL/blob/master/Images/2.png) 
 
 ## 3.Center相关约束
 ```
@@ -38,7 +38,7 @@
 /**RJ 2018-12-29 19:58:49 _blueView中心在_redView中心向下10的位置*/
 [_redView addCenterXYConstraintToView:_blueView constantX:0 constantY:10];
 ```
-![3](https://github.com/shenguanjiejie/RJVFL/3.png) 
+![3](https://github.com/shenguanjiejie/RJVFL/blob/master/Images/3.png) 
 
 
 ## 4.串约束
@@ -64,7 +64,7 @@ _yellowView1,
 _greenView1
 ] constant:0];
 ```
-![4](https://github.com/shenguanjiejie/RJVFL/4.png) 
+![4](https://github.com/shenguanjiejie/RJVFL/blob/master/Images/4.png) 
 
 ## 5.不规则串约束
 ```
@@ -91,7 +91,7 @@ _yellowView1,
 _greenView1
 ] constant:10];
 ```
-![5](https://github.com/shenguanjiejie/RJVFL/5.png) 
+![5](https://github.com/shenguanjiejie/RJVFL/blob/master/Images/5.png) 
 
 ## 6.复杂约束
 ```
@@ -144,4 +144,4 @@ constants:@[
 [UIView setHeightConstraintToViews:@[_redView,_yellowView1,_yellowView2,_yellowView3,_greenView1,_greenView2,_blueView,_purpleView1,_purpleView2] constant:30];
 ```
 
-![6](https://github.com/shenguanjiejie/RJVFL/6.png) 
+![6](https://github.com/shenguanjiejie/RJVFL/blob/master/Images/6.png) 
