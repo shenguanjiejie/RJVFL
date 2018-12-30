@@ -14,7 +14,6 @@
 ```
 /**RJ 2018-12-29 19:34:37 _redView和_blueView的宽为100,高为150*/
 [UIView setWidthConstraintToViews:@[_redView,_blueView] constant:100];
-/**RJ 2018-12-29 20:05:00 这行代码等价于下方两行*/
 [UIView setHeightConstraintToViews:@[_redView,_blueView] constants:@[@100,@150]];
 
 /**RJ 2018-12-29 19:36:07 _redView到self.backgroundView的上方和左方为10*/
