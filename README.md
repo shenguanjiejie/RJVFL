@@ -8,6 +8,7 @@
 /**RJ 2018-12-29 19:30:32 _blueView到_redView的四周边距分别为0,10,100,20*/
 [_redView addAllAlignConstraintToView:_blueView edgeInset:UIEdgeInsetsMake(0, 10, 100, 20)];
 ```
+<img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/1.png" width="375" height="667" alt="图片加载失败"/>
 ![1](https://github.com/shenguanjiejie/RJVFL/blob/master/Images/1.png) 
 
 ## 2.宽高约束及外部四周约束
