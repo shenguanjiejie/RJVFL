@@ -44,7 +44,7 @@
             cell.textLabel.text = @"宽高约束及外部四周约束";
             break;
         case 2:
-            cell.textLabel.text = @"Center约束";
+            cell.textLabel.text = @"Center相关约束";
             break;
         case 3:
             cell.textLabel.text = @"串约束";
