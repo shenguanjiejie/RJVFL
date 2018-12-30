@@ -108,9 +108,9 @@
             [_redView addAllAlignConstraintToView:_blueView edgeInset:UIEdgeInsetsMake(0, 10, 100, 20)];
             break;
         case 1:
-            /**RJ 2018-12-29 19:34:37 _redView和_blueView的宽为100,高为150*/
+            /**RJ 2018-12-29 19:34:37 _redView和_blueView的宽为100*/
             [UIView setWidthConstraintToViews:@[_redView,_blueView] constant:100];
-            /**RJ 2018-12-29 20:05:00 这行代码等价于下方两行*/
+            /**RJ 2018-12-29 20:05:00 这行代码等价于下方两行,_redView高100,_blueView高150*/
             [UIView setHeightConstraintToViews:@[_redView,_blueView] constants:@[@100,@150]];
             //            /**RJ 2018-12-29 20:03:02 _redView设置为正方形,即高度也为100,该方法调用不需要考虑顺序问题,完全可以先执行该方法*/
             //            [_redView setSquareConstraint];
