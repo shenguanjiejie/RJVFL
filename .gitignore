@@ -5,6 +5,7 @@
 ## Build generated
 build/
 DerivedData/
+.DS_Store
 
 ## Various settings
 *.pbxuser
@@ -61,3 +62,5 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+
