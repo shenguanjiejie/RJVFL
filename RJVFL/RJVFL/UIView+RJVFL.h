@@ -13,12 +13,12 @@
  所以如果遇到类似稍微特别一些的约束,可以结合系统layout使用,不排除后续会拓展这些功能的可能性
  
  @param view 要进行约束的view,self则是参照物(可以是同level的view,也可以是fatherView)
- @param constants 为NSNumber或者NSNull组成的数组,*****正负逻辑同VFL*****,正负号不再基于x和y轴作为位置基准线,而是基于相对位置(除了CenterX或者CenterY之间的约束外),如果为对齐约束(下方有对齐约束释义),则内部距离为+,阔出外部冗余距离为-,如果为一般约束,则外部距离为+,陷入内部距离为-.,更加的直观化、生活化,因此,大多数情况下不再需要使用负值.
+ @param constants 为NSNumber或者NSNull组成的数组,*****正负号逻辑同VFL*****,正负号不再基于x和y轴作为位置基准线,而是基于相对位置(除了CenterX或者CenterY之间的约束外),如果为对齐约束(下方有对齐约束释义),则内部距离为+,阔出外部冗余距离为-,如果为一般约束,则外部距离为+,陷入内部距离为-.,更加的直观化、生活化,因此,大多数情况下不再需要使用负值.
  @return 生成的constraint
  
  方法名中的H : Horizontal
  方法名中的V : Vertical
- 方法名中的Align : 对齐约束(例如 回 字形状就属于对齐约束),不加Align声明的方法为一般约束(例如 口-口 这种样式),eg:view1.top和view2.bottom约束为一般约束,view1.top和view2.top约束为对齐约束,*****正负逻辑同VFL*****
+ 方法名中的Align : 对齐约束(例如 回 字形状就属于对齐约束),不加Align声明的方法为一般约束(例如 口-口 这种样式),eg:view1.top和view2.bottom约束为一般约束,view1.top和view2.top约束为对齐约束,*****正负号逻辑同VFL*****
 
  */
 
@@ -206,7 +206,7 @@ typedef NS_ENUM(NSUInteger, RJDirection) {
  @param bottomMargin (NSNumber,NSArray,NULL) views数组中最底部的view和self的底部的约束constant,数组可以多层嵌套
  @param rightMargin (NSNumber,NSArray,NULL) views数组中最右边的view和self的右边的约束constant,数组可以多层嵌套
  */
-//- (void)addMatrixConstraintsToViews:(NSArray *)views rjConstantPoints:(NSArray *)points bottomMargin:(id)bottomMargin rightMargin:(id)rightMargin; NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, "搁置");
+//- (void)addMatrixConstraintsToViews:(NSArray *)views rjConstantPoints:(NSArray *)points bottomMargin:(id)bottomMargin rightMargin:(id)rightMargin __deprecated_msg("搁置");
 //+ (void)setVBunchConstraintToViews:(NSArray *)views constant:(CGFloat)constant;
 
 /**RJ

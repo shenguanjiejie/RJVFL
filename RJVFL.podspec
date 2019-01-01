@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "iOS layout 封装,思路来源于VFL"
   s.homepage     = "https://github.com/shenguanjiejie/RJVFL"
   s.license = { :type => 'MIT'}
-  s.author             = { "EnjoySR" => "835166018@qq.com" }
+  s.author             = { "shenguanjiejie" => "835166018@qq.com" }
   s.social_media_url   = "https://github.com/shenguanjiejie"
   s.platform     = :ios, "10.0"
   s.source       = { :git => "https://github.com/shenguanjiejie/RJVFL.git", :tag => s.version }
