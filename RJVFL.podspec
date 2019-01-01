@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RJVFL"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "iOS layout 封装,思路来源于VFL"
   s.homepage     = "https://github.com/shenguanjiejie/RJVFL"
   s.license = { :type => 'MIT'}
