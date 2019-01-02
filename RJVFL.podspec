@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license = { :type => 'MIT'}
   s.author             = { "shenguanjiejie" => "835166018@qq.com" }
   s.social_media_url   = "https://github.com/shenguanjiejie"
-  s.platform     = :ios, "10.0"
+  s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/shenguanjiejie/RJVFL.git", :tag => s.version }
   s.source_files  = "RJVFL/RJVFL/*.{h,m}"
   s.requires_arc = true
