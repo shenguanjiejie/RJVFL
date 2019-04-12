@@ -39,7 +39,7 @@
 }
 
 /**RJ 2018-12-30 15:23:59
- 横竖屏适配,不在意横竖屏的可以忽略
+ 横竖屏适配
  */
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
     [coordinator animateAlongsideTransition:nil completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
