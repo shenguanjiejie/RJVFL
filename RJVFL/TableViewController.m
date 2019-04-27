@@ -26,7 +26,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,7 +53,10 @@
             cell.textLabel.text = @"不规则串约束";
             break;
         case 5:
-            cell.textLabel.text = @"复杂约束";
+            cell.textLabel.text = @"有规律复杂约束";
+            break;
+        case 6:
+            cell.textLabel.text = @"无规律复杂约束";
             break;
         default:
             cell.textLabel.text = @"";

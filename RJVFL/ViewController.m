@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UIView *yellowView3;
 @property (nonatomic, strong) UIView *greenView1;
 @property (nonatomic, strong) UIView *greenView2;
+@property (nonatomic, strong) UIView *greenView3;
 @property (nonatomic, strong) UIView *purpleView1;
 @property (nonatomic, strong) UIView *purpleView2;
 @property (nonatomic, strong) UIView *purpleView3;
@@ -39,7 +40,7 @@
 }
 
 /**RJ 2018-12-30 15:23:59
- 横竖屏适配
+ 横竖屏
  */
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
     [coordinator animateAlongsideTransition:nil completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
@@ -70,8 +71,13 @@
     self.backgroundView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     [self.view addSubview:self.backgroundView];
     UIEdgeInsets inset = [UIApplication sharedApplication].keyWindow.safeAreaInsets;
-    [self.view addAllAlignConstraintToView:self.backgroundView edgeInset:UIEdgeInsetsMake(inset.top+44, inset.left, inset.bottom, inset.right)];
+    if (_index == 5) {
+        [self.view addCenterXYConstraintToView:self.backgroundView constantX:0 constantY:0];
+    }else{
+        [self.view addAllAlignConstraintToView:self.backgroundView edgeInset:UIEdgeInsetsMake(inset.top+44, inset.left, inset.bottom, inset.right)];
+    }
     
+    /**RJ 2019-04-27 14:41:03 只是方便用来演示,现实开发中并不可取,请勿模仿*/
     self.redView = [self addSubviewWithBackgroundColor:[UIColor redColor]];
     self.blueView = [self addSubviewWithBackgroundColor:[UIColor blueColor]];
     self.yellowView1 = [self addSubviewWithBackgroundColor:[UIColor yellowColor]];
@@ -79,6 +85,7 @@
     self.yellowView3 = [self addSubviewWithBackgroundColor:[UIColor yellowColor]];
     self.greenView1 = [self addSubviewWithBackgroundColor:[UIColor greenColor]];
     self.greenView2 = [self addSubviewWithBackgroundColor:[UIColor greenColor]];
+    self.greenView3 = [self addSubviewWithBackgroundColor:[UIColor greenColor]];
     self.purpleView1 = [self addSubviewWithBackgroundColor:[UIColor purpleColor]];
     self.purpleView2 = [self addSubviewWithBackgroundColor:[UIColor purpleColor]];
     self.purpleView3 = [self addSubviewWithBackgroundColor:[UIColor purpleColor]];
@@ -181,6 +188,26 @@
                                                     ] constant:10];
             break;
         case 5:
+        {
+            NSArray *views = @[
+                               @[_yellowView1,_yellowView2,_yellowView3],
+                               @[_greenView1,_greenView2,_greenView3],
+                               @[_purpleView1,_purpleView2,_purpleView3]
+                               ];
+            
+            /**RJ 2019-04-27 14:49:44 九宫格的全部布局,简单的几行代码完成*/
+            [self.backgroundView addCenterXYConstraintToView:_greenView2 constantX:0 constantY:0];
+            [UIView setWidthConstraintToViews:views constant:80];
+            [UIView setHeightConstraintToViews:views constant:80];
+            [self.backgroundView addBunchConstraintsToViews:views constant:10 direction:RJDirectionTop];
+            [self.backgroundView addBunchConstraintsToViews:@[
+                                                 @[_yellowView1,_greenView1,_purpleView1],
+                                                 @[_yellowView2,_greenView2,_purpleView2],
+                                                 @[_yellowView3,_greenView3,_purpleView3],
+                                                 ] constant:10 direction:RJDirectionLeft];
+        }
+            break;
+        case 6:
             /**RJ 2018-12-29 20:57:21
              接下来是稍微复杂一点的约束,其实说是复杂,只是相对于上面的case而言,这些才是我们日常开发中常常遇到的约束场景
              */
@@ -230,7 +257,7 @@
             [UIView setHeightConstraintToViews:@[_redView,_yellowView1,_yellowView2,_yellowView3,_greenView1,_greenView2,_blueView,_purpleView1,_purpleView2] constant:30];
             
             break;
-        case 6:
+        case 7:
             break;
             
         default:

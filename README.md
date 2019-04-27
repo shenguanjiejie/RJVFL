@@ -101,7 +101,28 @@ _greenView1
 ```
 <img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/5.png" width="225" height="400.2" alt="图片加载失败"/>
 
-## 6.复杂约束
+## 6.有规律复杂约束
+```
+NSArray *views = @[
+@[_yellowView1,_yellowView2,_yellowView3],
+@[_greenView1,_greenView2,_greenView3],
+@[_purpleView1,_purpleView2,_purpleView3]
+];
+
+/**RJ 2019-04-27 14:49:44 九宫格的全部布局,简单的几行代码完成*/
+[self.backgroundView addCenterXYConstraintToView:_greenView2 constantX:0 constantY:0];
+[UIView setWidthConstraintToViews:views constant:80];
+[UIView setHeightConstraintToViews:views constant:80];
+[self.backgroundView addBunchConstraintsToViews:views constant:10 direction:RJDirectionTop];
+[self.backgroundView addBunchConstraintsToViews:@[
+@[_yellowView1,_greenView1,_purpleView1],
+@[_yellowView2,_greenView2,_purpleView2],
+@[_yellowView3,_greenView3,_purpleView3],
+] constant:10 direction:RJDirectionLeft];
+```
+<img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/6.png" width="225" height="400.2" alt="图片加载失败"/>
+
+## 7.无规律复杂约束
 ```
 /**RJ 2018-12-29 20:57:21
 接下来是稍微复杂一点的约束,其实说是复杂,只是相对于上面的case而言,这些才是我们日常开发中常常遇到的约束场景
@@ -151,4 +172,4 @@ constants:@[
 [UIView setWidthConstraintToViews:@[_redView,_yellowView1,_yellowView2,_yellowView3,_greenView1,_greenView2,_blueView,_purpleView1,_purpleView2,_purpleView3,_purpleView4] constants:@[@100,@80,@80,@60,@100,@100,@280,@60,@40,@80,@60]];
 [UIView setHeightConstraintToViews:@[_redView,_yellowView1,_yellowView2,_yellowView3,_greenView1,_greenView2,_blueView,_purpleView1,_purpleView2] constant:30];
 ```
-<img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/6.png" width="225" height="400.2" alt="图片加载失败"/>
+<img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/7.png" width="225" height="400.2" alt="图片加载失败"/>
