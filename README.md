@@ -3,14 +3,14 @@
 安装:
 iOS 8+
 
-```
+``` objc
 pod 'RJVFL'
 ```
 如果不使用CocoaPods
 将UIView+RJVFL.h和UIView+RJVFL.m加入工程即可
 
 ## 1.四周对齐约束
-```
+``` objc
 /**RJ 2018-12-29 19:29:01 _redView到self.backgroundView的四周边距都为10,该方法等价于下面四行代码*/
 [self.backgroundView addAllAlignConstraintToView:_redView constant:10];
 /**RJ 2018-12-29 19:30:32 _blueView到_redView的四周边距分别为0,10,100,20*/
@@ -19,7 +19,7 @@ pod 'RJVFL'
 <img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/1.png" width="225" height="400.2" alt="图片加载失败"/>
 
 ## 2.宽高约束及外部四周约束
-```
+``` objc
 /**RJ 2018-12-29 19:34:37 _redView和_blueView的宽为100*/
 [UIView setWidthConstraintToViews:@[_redView,_blueView] constant:100];
  /**RJ 2018-12-29 20:05:00 _redView高100,_blueView高150*/
@@ -36,7 +36,7 @@ pod 'RJVFL'
 <img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/2.png" width="225" height="400.2" alt="图片加载失败"/>
 
 ## 3.Center相关约束
-```
+``` objc
 /**RJ 2018-12-29 19:34:37 _redView和_blueView的宽为100,高为200*/
 [UIView setWidthConstraintToViews:@[_redView,_blueView] constant:150];
 [UIView setHeightConstraintToViews:@[_redView,_blueView] constant:200];
@@ -50,7 +50,7 @@ pod 'RJVFL'
 
 
 ## 4.串约束
-```
+``` objc
 /**RJ 2018-12-29 20:33:36 仅需两行代码,搞定一串view的所有简单布局*/
 
 /**RJ 2018-12-29 20:30:19
@@ -75,7 +75,7 @@ _greenView1
 <img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/4.png" width="225" height="400.2" alt="图片加载失败"/>
 
 ## 5.不规则串约束
-```
+``` objc
 /**RJ 2018-12-29 20:46:05 与case 3不同的是,这个串中的四个view高度间距都不相同,注意由于constants数组中只有四个constant
 依次为 self.backgroundView 10 _redView
 _redView 20 _blueView
@@ -102,7 +102,7 @@ _greenView1
 <img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/5.png" width="225" height="400.2" alt="图片加载失败"/>
 
 ## 6.有规律复杂约束
-```
+``` objc
 NSArray *views = @[
 @[_yellowView1,_yellowView2,_yellowView3],
 @[_greenView1,_greenView2,_greenView3],
@@ -123,7 +123,7 @@ NSArray *views = @[
 <img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/6.png" width="225" height="400.2" alt="图片加载失败"/>
 
 ## 7.无规律复杂约束
-```
+``` objc
 /**RJ 2018-12-29 20:57:21
 接下来是稍微复杂一点的约束,其实说是复杂,只是相对于上面的case而言,这些才是我们日常开发中常常遇到的约束场景
 */
