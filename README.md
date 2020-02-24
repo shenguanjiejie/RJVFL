@@ -18,7 +18,7 @@ pod 'RJVFL'
 ```
 <img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/1.png" width="225" height="400.2" alt="图片加载失败"/>
 
-## 2.宽高约束及外部四周约束
+## 2.宽高约束及外部四周非对齐约束
 ``` objc
 /**RJ 2018-12-29 19:34:37 _redView和_blueView的宽为100*/
 [UIView setWidthConstraintToViews:@[_redView,_blueView] constant:100];
@@ -49,7 +49,7 @@ pod 'RJVFL'
 <img src="https://github.com/shenguanjiejie/RJVFL/blob/master/Images/3.png" width="225" height="400.2" alt="图片加载失败"/>
 
 
-## 4.串约束
+## 4.串形约束
 ``` objc
 /**RJ 2018-12-29 20:33:36 仅需两行代码,搞定一串view的所有简单布局*/
 
